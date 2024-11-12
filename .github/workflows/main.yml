@@ -174,7 +174,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ""
+        password: ${{ secrets.ROOT_PASSWORD }}
         source: "compose.yaml"
         target: "devops/taski"
     - name: Executing remote ssh commands to deploy
@@ -183,7 +183,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ""
+        password: ${{ secrets.ROOT_PASSWORD }}
         # Параметр script передаёт в action appleboy/ssh-action команды,
         # которые нужно выполнить на сервере, 
         # с которым установлено соединение
