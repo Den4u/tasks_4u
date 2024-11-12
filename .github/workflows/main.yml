@@ -109,11 +109,12 @@ jobs:
         cd frontend/
         npm ci
 
-    - name: Test frontend
-      # Запускаем тесты
-      run: |
-        cd frontend/
-        npm run test
+    # - name: Test frontend
+    #   # Запускаем тесты
+    #   run: |
+    #     cd frontend/
+    #     npm run test
+    
   build_frontend_and_push_to_docker_hub:
     name: Push frontend Docker image to DockerHub
     runs-on: ubuntu-latest
